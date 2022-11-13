@@ -1,0 +1,49 @@
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --Very_Pale_Cyan: hsl(193, 100%, 96%);
+  --Very_Dark_Cyan: hsl(192, 100%, 9%);
+  --Grayish_Blue: hsl(208, 11%, 55%);
+}
+
+@font-face {
+  font-family: "";
+  src: url("");
+  /* font-weight: ; */
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* 
+    ### Body, Call-to-actions
+    font-family: 'Open Sans', sans-serif;
+    ### Headings
+    font-family: 'Poppins', sans-serif; */
+
+body {
+  height: 100%;
+  font-size: 18px;
+}
+
+main {
+  min-height: 100%;
+}
+
+.resetBtnStyle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
