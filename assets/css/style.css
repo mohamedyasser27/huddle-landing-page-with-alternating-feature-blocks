@@ -96,6 +96,11 @@ header .content {
   width: 100%;
 }
 
+.header__trial-btn:hover {
+  color: rgb(151, 151, 151);
+
+}
+
 .description .content {
   display: flex;
   align-items: center;
@@ -132,6 +137,11 @@ header .content {
   border-radius: 50px;
   padding: 1em 3em;
   font-weight: 600;
+}
+
+.description__free-start-btn:hover {
+  filter: opacity(.75);
+
 }
 
 .illustration__img {
@@ -205,9 +215,12 @@ header .content {
   max-width: 350px;
   width: 100%;
   padding: 1.2em;
-  box-shadow: 0px 0px 7px 0px rgb(231, 228, 228);
-}
+  box-shadow: 0px 0px 7px 0px rgb(231, 228, 228);}
 
+.join-section__join-btn:hover {
+  filter: opacity(.75);
+
+}
 footer {
   background-color: var(--Very_Dark_Cyan);
   padding-top: 15rem;
@@ -234,7 +247,7 @@ footer .content .content {
 
 .company-contact {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 25px;
   margin-bottom: 10px;
 }
@@ -242,6 +255,9 @@ footer .content .content {
 .company-contact__info {
   color: #fff;
   max-width: 40ch;
+}
+.company-contact__icon{
+  translate:0px 6px;
 }
 
 .nav__list {
