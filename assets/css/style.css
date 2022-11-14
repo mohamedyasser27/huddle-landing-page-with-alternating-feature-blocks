@@ -40,6 +40,12 @@ body {
   color: var(--Very_Dark_Cyan);
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
 main {
   min-height: 100%;
 }
@@ -71,6 +77,7 @@ header .content {
   justify-content: space-between;
   padding-block: 50px;
 }
+
 .header__logo img {
   max-width: 100%;
 }
@@ -78,14 +85,16 @@ header .content {
 .header__trial-btn {
   background-color: #fff;
   border-radius: 50px;
+  color: var(--Very_Dark_Cyan);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   box-shadow: 0px 0px 26px -1px rgb(212, 212, 212);
   padding: 0px;
   max-width: 200px;
-  padding: 1em;
+  padding: 0.8em;
   width: 100%;
 }
+
 .description .content {
   display: flex;
   align-items: center;
@@ -95,6 +104,7 @@ header .content {
 .description__illustration {
   width: 50%;
 }
+
 .description__section {
   width: 50%;
   display: flex;
@@ -104,7 +114,6 @@ header .content {
 }
 
 .description__heading {
-  font-family: "Poppins";
   font-weight: 600;
   margin: 0px;
   width: 100%;
@@ -126,22 +135,15 @@ header .content {
 
 .illustration__img {
   max-width: 100%;
-  object-fit: cover;
 }
 
 .feature-card {
+  padding: 3rem 5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 35px;
   border-radius: 20px;
   margin-bottom: 35px;
-  padding: 3rem;
   box-shadow: 0px 0px 7px 0px rgb(231, 228, 228);
-}
-
-.feature-card:nth-child(even) > .feature-card__illustration {
-  order: -1;
 }
 
 .feature-card__description {
@@ -154,6 +156,8 @@ header .content {
 
 .feature-card__description__info {
   color: var(--Grayish_Blue);
+  width: 100%;
+  max-width: 55ch;
 }
 
 .feature-card__illustration {
@@ -161,12 +165,44 @@ header .content {
   display: flex;
   justify-content: flex-end;
 }
+
 .feature-card:nth-child(even) > .feature-card__illustration {
+  order: -1;
   justify-content: flex-start;
 }
 
 .feature-card__illustration__img {
-  max-width: 65%;
+  max-width: 75%;
+}
+
+.join-section {
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 0px 0px 7px 0px rgb(231, 228, 228);
+}
+
+.join-section_heading {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.join-section__join-btn {
+  background-color: var(--Pink);
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  max-width: 350px;
+  width: 100%;
+  padding: 1.2em;
+  box-shadow: 0px 0px 7px 0px rgb(231, 228, 228);
 }
 
 @media only screen and (min-width: 1440px) {
@@ -195,35 +231,60 @@ header .content {
   .description__illustration {
     width: 100%;
   }
+  
   .description__section {
     align-items: center;
     text-align: center;
   }
-  .header__trial-btn {
-    width: 150px;
+
+  .description__heading {
+    font-size: clamp(1.5rem, 0.3837rem + 6.2791vw, 3rem);
   }
-.feature-card{
-  padding-inline: 1rem;
-  padding-block: 3rem;
-  flex-direction: column;
-}
+
+  .description__info {
+    font-size: clamp(1rem, 0.6279rem + 2.0930vw, 1.5rem);
+    max-width: 40ch;
+  }
+  .header__trial-btn {
+    font-size: 18px;
+  }
+
+  .feature-card {
+    padding-inline: 1rem;
+    padding-block: 6rem;
+    flex-direction: column;
+  }
+
   .feature-card > .feature-card__illustration {
     order: -1;
+    margin-bottom: 70px;
   }
 
-  .feature-card > *
-  {
+  .feature-card > * {
     width: 100%;
   }
-  .feature-card__description{
+  .feature-card__description__heading,
+  .feature-card__description__info {
     text-align: center;
   }
-
-  .feature-card__illustration{
-      justify-content:center !important;
-
+  .feature-card__description__heading {
+    font-size: clamp(1.5rem, 0.7558rem + 4.1860vw, 2.5rem);
   }
-  .feature-card__illustration__img{
-max-width: 100%;
+
+  .feature-card__description__info {
+    max-width: 32ch;
+    margin: 0 auto;
+    font-size: clamp(1rem, 0.4791rem + 2.9302vw, 1.7rem);
+  }
+
+  .feature-card__illustration {
+    justify-content: center !important;
+  }
+  .feature-card__illustration__img {
+    max-width: 85%;
+  }
+
+  .join-section {
+    width: 90vw;
   }
 }
