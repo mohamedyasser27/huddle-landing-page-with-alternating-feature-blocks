@@ -45,7 +45,7 @@ main {
 }
 
 .content {
-  width: 80%;
+  width: 90vw;
   margin: 0 auto;
   min-height: 100%;
 }
@@ -62,6 +62,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  margin-bottom: 75px;
 }
 
 header .content {
@@ -90,7 +91,10 @@ header .content {
   align-items: center;
   padding-bottom: 50px;
 }
-
+.description__section,
+.description__illustration {
+  width: 50%;
+}
 .description__section {
   width: 50%;
   display: flex;
@@ -103,6 +107,8 @@ header .content {
   font-family: "Poppins";
   font-weight: 600;
   margin: 0px;
+  width: 100%;
+  max-width: 17ch;
 }
 
 .description__info {
@@ -118,15 +124,56 @@ header .content {
   font-weight: 600;
 }
 
-.description__illustration {
-  width: 50%;
-}
-
 .illustration__img {
   max-width: 100%;
   object-fit: cover;
 }
 
+.feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  border-radius: 20px;
+  margin-bottom: 35px;
+  padding: 3rem;
+  box-shadow: 0px 0px 7px 0px rgb(231, 228, 228);
+}
+
+.feature-card:nth-child(even) > .feature-card__illustration {
+  order: -1;
+}
+
+.feature-card__description {
+  width: 50%;
+}
+
+.feature-card__description__heading {
+  margin-bottom: 20px;
+}
+
+.feature-card__description__info {
+  color: var(--Grayish_Blue);
+}
+
+.feature-card__illustration {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.feature-card:nth-child(even) > .feature-card__illustration {
+  justify-content: flex-start;
+}
+
+.feature-card__illustration__img {
+  max-width: 65%;
+}
+
+@media only screen and (min-width: 1440px) {
+  .content {
+    width: 75%;
+  }
+}
 @media only screen and (max-width: 850px) {
   .site-intro {
     background-image: url("../images/bg-hero-mobile.svg");
@@ -154,5 +201,29 @@ header .content {
   }
   .header__trial-btn {
     width: 150px;
+  }
+.feature-card{
+  padding-inline: 1rem;
+  padding-block: 3rem;
+  flex-direction: column;
+}
+  .feature-card > .feature-card__illustration {
+    order: -1;
+  }
+
+  .feature-card > *
+  {
+    width: 100%;
+  }
+  .feature-card__description{
+    text-align: center;
+  }
+
+  .feature-card__illustration{
+      justify-content:center !important;
+
+  }
+  .feature-card__illustration__img{
+max-width: 100%;
   }
 }
